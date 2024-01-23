@@ -33,18 +33,19 @@ Run `gotpm --help` and `gotpm <command> --help` for more documentation.
 
 ### Building and Installing `gotpm`
 
-`gotpm` can be directly installed from this repo by running:
+To build `gotpm` from a cloned version of this repo, run:
 ```bash
-go install github.com/google/go-tpm-tools/cmd/gotpm@latest
-# gotpm will be installed to $GOBIN
-gotpm --help
-```
-Alternatively, to build `gotpm` from a cloned version of this repo, run:
-```bash
-cd /my/path/to/cloned/go-tpm-tools/cmd/gotpm
-go build
-# gotpm will be in the cmd/gotpm subdirectory of the repo
-./gotpm --help
+apt-get install wget tar
+
+# Install latest GO
+wget https://storage.googleapis.com/golang/go1.21.6.linux-s390x.tar.gz
+tar -C /usr/local -xzf go1.21.6.linux-s390x.tar.gz
+export PATH=/usr/local/go/bin:$PATH
+go version
+
+git clone https://github.com/namrata-ibm/go-tpm-tools
+cd go-tpm-tools
+go build ./...
 ```
 
 ## Minimum Required Go Version
