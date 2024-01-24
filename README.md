@@ -35,7 +35,7 @@ Run `gotpm --help` and `gotpm <command> --help` for more documentation.
 
 To build `gotpm` from a cloned version of this repo, run:
 ```bash
-apt-get install wget tar
+apt-get install wget tar gcc
 
 # Install latest GO
 wget https://storage.googleapis.com/golang/go1.21.6.linux-s390x.tar.gz
